@@ -1,15 +1,11 @@
 ## What’s changed
 
-## ✨ New features
-
-- Add add-on translation support @frenck (#54)
-
-## 🧰 Maintenance
-
-- Apply updated repository structure & CI workflow @frenck (#53)
-
 ## ⬆️ Dependency updates
 
-- ⬆️ Bump actions/cache from v2.1.4 to v2.1.5 @dependabot (#50)
-- ⬆️ Bump brpaz/hadolint-action from v1.3.1 to v1.4.0 @dependabot (#51)
-- Upgrades add-on base image to v9.2.0 @frenck (#52)
+- ⬆️ Bump docker/setup-buildx-action from 1.3.0 to 1.5.0 @dependabot (#77)
+- ⬆️ Bump docker/build-push-action from 2.5.0 to 2.6.1 @dependabot (#76)
+- ⬆️ Bump docker/login-action from 1.9.0 to 1.10.0 @dependabot (#74)
+- ⬆️ Upgrades add-on base image to v10.0.0 @frenck (#78)
+- ⬆️ Bump dessant/lock-threads from 2.0.3 to 2.1.1 @dependabot (#79)
+- ⬆️ Bump docker/setup-buildx-action from 1.5.0 to 1.5.1 @dependabot (#80)
+- ⬆️ Upgrades php7 to 7.4.21-r0 @frenck (#81)

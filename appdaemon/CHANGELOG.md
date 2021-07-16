@@ -1,19 +1,11 @@
 ## What’s changed
 
-## ✨ New features
-
-- Add add-on translation support @frenck (#110)
-
-## 🚀 Enhancements
-
-- Improve translations source file @frenck (#111)
-
-## 🧰 Maintenance
-
-- Apply updated repository structure & CI workflow @frenck (#109)
-
 ## ⬆️ Dependency updates
 
-- ⬆️ Bump actions/cache from v2.1.4 to v2.1.5 @dependabot (#106)
-- ⬆️ Bump brpaz/hadolint-action from v1.3.1 to v1.4.0 @dependabot (#107)
-- Upgrades add-on base image to v9.2.0 @frenck (#108)
+- ⬆️ Bump frenck/action-addon-information from 1.0.0 to 1.1 @dependabot (#122)
+- ⬆️ Bump micnncim/action-label-syncer from 1.2.0 to 1.3.0 @dependabot (#123)
+- ⬆️ Bump docker/setup-qemu-action from 1.1.0 to 1.2.0 @dependabot (#125)
+- ⬆️ Bump actions/cache from 2.1.5 to 2.1.6 @dependabot (#126)
+- ⬆️ Bump docker/build-push-action from 2.4.0 to 2.5.0 @dependabot (#124)
+- ⬆️ Bump frenck/action-addon-information from 1.1 to 1.2.2 @dependabot (#128)
+- ⬆️ Upgrades add-on base image to v9.2.2 @frenck (#130)

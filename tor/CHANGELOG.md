@@ -2,12 +2,13 @@
 
 ## ⬆️ Dependency updates
 
-- ⬆️ Bump actions/stale from v3.0.15 to v3.0.16 @dependabot (#45)
-- ⬆️ Bump frenck/action-addon-linter from v1.4 to v2 @dependabot (#46)
-- ⬆️ Bump release-drafter/release-drafter from v5.13.0 to v5.14.0 @dependabot (#47)
-- ⬆️ Bump docker/build-push-action from v2.2.2 to v2.3.0 @dependabot (#48)
-- ⬆️ Bump actions/stale from v3.0.16 to v3.0.17 @dependabot (#49)
-- ⬆️ Bump actions/stale from v3.0.17 to v3.0.18 @dependabot (#50)
-- ⬆️ Upgrades tor to 0.4.4.8-r0 @frenck (#52)
-- ⬆️ Bump release-drafter/release-drafter from v5.14.0 to v5.15.0 @dependabot (#51)
-- ⬆️ Upgrades add-on base image to v9.1.5 @frenck (#53)
+- ⬆️ Bump brpaz/hadolint-action from v1.4.0 to v1.5.0 @dependabot (#67)
+- ⬆️ Bump frenck/action-addon-linter from 2 to 2.1 @dependabot (#68)
+- ⬆️ Bump actions/stale from 3.0.18 to 3.0.19 @dependabot (#69)
+- ⬆️ Bump frenck/action-addon-information from 1.0.0 to 1.1 @dependabot (#70)
+- ⬆️ Bump micnncim/action-label-syncer from 1.2.0 to 1.3.0 @dependabot (#71)
+- ⬆️ Bump docker/build-push-action from 2.4.0 to 2.5.0 @dependabot (#72)
+- ⬆️ Bump docker/setup-qemu-action from 1.1.0 to 1.2.0 @dependabot (#73)
+- ⬆️ Bump actions/cache from 2.1.5 to 2.1.6 @dependabot (#74)
+- ⬆️ Bump frenck/action-addon-information from 1.1 to 1.2.2 @dependabot (#76)
+- ⬆️ Upgrades add-on base image to v9.2.2 @frenck (#77)

@@ -2,9 +2,13 @@
 
 ## ⬆️ Dependency updates
 
-- ⬆️ Bump docker from 4.4.3 to 4.4.4 in /glances @dependabot (#127)
-- ⬆️ Bump actions/stale from v3.0.17 to v3.0.18 @dependabot (#128)
-- ⬆️ Bump release-drafter/release-drafter from v5.14.0 to v5.15.0 @dependabot (#129)
-- ⬆️ Upgrades python3 to 3.8.8-r0 @frenck (#131)
-- ⬆️ Bump zeroconf from 0.28.8 to 0.29.0 in /glances @dependabot (#130)
-- ⬆️ Upgrades add-on base image to v9.1.5 @frenck (#132)
+- ⬆️ Bump docker/login-action from 1.9.0 to 1.10.0 @dependabot (#164)
+- ⬆️ Bump docker/setup-buildx-action from 1.3.0 to 1.4.1 @dependabot (#165)
+- ⬆️ Bump zeroconf from 0.31.0 to 0.32.0 @dependabot (#166)
+- ⬆️ Bump docker/build-push-action from 2.5.0 to 2.6.1 @dependabot (#167)
+- ⬆️ Bump glances from 3.1.7 to 3.2.0 in /glances @dependabot (#169)
+- ⬆️ Bump docker/setup-buildx-action from 1.4.1 to 1.5.0 @dependabot (#168)
+- ⬆️ Bump zeroconf from 0.32.0 to 0.32.1 @dependabot (#170)
+- ⬆️ Bump dessant/lock-threads from 2.0.3 to 2.1.1 @dependabot (#171)
+- ⬆️ Bump glances from 3.2.0 to 3.2.1 @dependabot (#172)
+- ⬆️ Bump docker/setup-buildx-action from 1.5.0 to 1.5.1 @dependabot (#173)

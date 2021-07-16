@@ -1,10 +1,6 @@
 ---
 channel: stable
 addons:
-  adb:
-    repository: hassio-addons/addon-adb
-    target: adb
-    image: ghcr.io/hassio-addons/adb/{arch}
   adguard:
     repository: hassio-addons/addon-adguard-home
     target: adguard
@@ -77,10 +73,6 @@ addons:
     repository: hassio-addons/addon-log-viewer
     target: log-viewer
     image: ghcr.io/hassio-addons/log-viewer/{arch}
-  lutron-cert:
-    repository: hassio-addons/addon-lutron-cert
-    target: lutron-cert
-    image: ghcr.io/hassio-addons/lutron-cert/{arch}
   matrix:
     repository: hassio-addons/addon-matrix
     target: matrix
@@ -89,10 +81,6 @@ addons:
     repository: hassio-addons/addon-motioneye
     target: motioneye
     image: ghcr.io/hassio-addons/motioneye/{arch}
-  mqtt:
-    repository: hassio-addons/addon-mqtt
-    target: mqtt
-    image: hassioaddons/mqtt
   node-red:
     repository: hassio-addons/addon-node-red
     target: node-red
@@ -165,10 +153,6 @@ addons:
     repository: hassio-addons/addon-zerotier
     target: zerotier
     image: ghcr.io/hassio-addons/zerotier/{arch}
-  zwave2mqtt:
-    repository: hassio-addons/addon-zwave2mqtt
-    target: zwave2mqtt
-    image: ghcr.io/hassio-addons/zwave2mqtt/{arch}
   zwavejs2mqtt:
     repository: hassio-addons/addon-zwavejs2mqtt
     target: zwavejs2mqtt

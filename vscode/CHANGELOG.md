@@ -1,17 +1,15 @@
 ## What’s changed
 
-This release adds support for Blueprints! 🎉 
-
-Additionally, ESPHome files are now handled and assigned correctly. This would give you an amazing auto-completion and validation experience on your ESPHome configuration files.
-
-ℹ️  Note: It might be that you run a custom configuration/settings for VSCode, in that case, the ESPHome change will not be applied automatically. Be sure to reset your setting in that case. For more information refer to the documentation:
-<https://github.com/hassio-addons/addon-vscode/blob/main/vscode/DOCS.md#resetting-your-vscode-settings-to-the-add-on-defaults>
-
-## 🚀 Enhancements
-
-- Assign ESPHome files to the ESPHome extension @frenck (#211)
-
 ## ⬆️ Dependency updates
 
-- ⬆️ Upgrades keesschollaart.vscode-home-assistant to 1.16.0 @frenck (#212)
-- ⬆️ Upgrades Home Assistant CLI to v4.11.3 @frenck (#213)
+- ⬆️ Upgrades code-server to 3.11.0 @frenck (#294)
+- ⬆️ Upgrades ESPHome.esphome-vscode to 0.20.0 @frenck (#295)
+- ⬆️ Upgrades keesschollaart.vscode-home-assistant to 1.20.0 @frenck (#296)
+- ⬆️ Upgrades esbenp.prettier-vscode to 8.0.1 @frenck (#297)
+- ⬆️ Bump docker/build-push-action from 2.5.0 to 2.6.1 @dependabot (#285)
+- ⬆️ Bump docker/setup-buildx-action from 1.4.1 to 1.5.0 @dependabot (#287)
+- ⬆️ Bump dessant/lock-threads from 2.0.3 to 2.1.1 @dependabot (#289)
+- ⬆️ Bump docker/setup-buildx-action from 1.5.0 to 1.5.1 @dependabot (#290)
+- ⬆️ Bump frenck/action-addon-linter from 2.1 to 2.2 @dependabot (#291)
+- ⬆️ Bump actions/stale from 3.0.19 to 4 @dependabot (#292)
+- ⬆️ Upgrades add-on base image to v4.2.2 @frenck (#293)

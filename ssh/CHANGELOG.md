@@ -1,15 +1,12 @@
 ## What’s changed
 
-## 🧰 Maintenance
-
-- Apply updated repository structure & CI workflow @frenck (#248)
+This release comes with a major update to the base image, bumping Alpine Linux to 3.14.
+It comes with Python 3.9 and many more major upgrades to its packages.
+Therefore this release is marked as a major release.
 
 ## ⬆️ Dependency updates
 
-- ⬆️ Bump docker/build-push-action from v2.3.0 to v2.4.0 @dependabot (#235)
-- ⬆️ Bump docker/setup-qemu-action from v1.0.1 to v1.0.2 @dependabot (#236)
-- ⬆️ Bump docker/setup-buildx-action from v1.1.1 to v1.1.2 @dependabot (#237)
-- ⬆️ Bump yamllint from 1.26.0 to 1.26.1 in /ssh @dependabot (#234)
-- ⬆️ Upgrades Home Assistant CLI to v4.12.0 @frenck (#241)
-- ⬆️ Bump actions/cache from v2.1.4 to v2.1.5 @dependabot (#243)
-- Upgrades add-on base image to v9.2.0 @frenck (#247)
+- ⬆️ Bump docker/login-action from 1.9.0 to 1.10.0 @dependabot (#283)
+- ⬆️ Bump docker/build-push-action from 2.5.0 to 2.6.1 @dependabot (#287)
+- ⬆️ Bump docker/setup-buildx-action from 1.3.0 to 1.5.0 @dependabot (#288)
+- ⬆️ Upgrades add-on base image to v10.0.0 @frenck (#284)
