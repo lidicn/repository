@@ -1,4 +1,4 @@
-# Home Assistant Community Add-on: Network UPS Tools
+# Home Assistant Community App: Network UPS Tools
 
 The primary goal of the Network UPS Tools (NUT) project is to provide support
 for Power Devices, such as Uninterruptible Power Supplies, Power Distribution
@@ -13,35 +13,34 @@ are [compatible][nut-compatible].
 The Network UPS Tools (NUT) project is the combined effort of
 many [individuals and companies][nut-acknowledgements].
 
-Be sure to add the NUT integration after starting the add-on.
-
-**Note**: _The host `a0d7b954-nut` can be used to allow Home Assistant to
-communicate directly with the addon_
-
-For more information on how to configure the NUT integration in Home Assistant
-see the [NUT integration documentation][nut-ha-docs].
-
 ## Installation
 
-The installation of this add-on is pretty straightforward and not different in
-comparison to installing any other Home Assistant add-on.
+The installation of this app is pretty straightforward and not different in
+comparison to installing any other Home Assistant app.
 
-1. Search for the "Network UPS Tools" add-on in the Home Assistant add-on store
-   and install it.
-1. Install the "Network UPS Tools" add-on.
-1. Configure the `users` and `devices` options.
-1. Start the "Network UPS Tools" add-on.
-1. Check the logs of the "Network UPS Tools" add-on to see if everything went well.
-1. Configure the [NUT Integration][nut-ha-docs].
+1. Click the Home Assistant My button below to open the app on your Home
+   Assistant instance.
+
+   [![Open this app in your Home Assistant instance.][addon-badge]][addon]
+
+1. Click the "Install" button to install the app.
+1. Configure the `users` and `devices` options, as described below.
+1. Start the "Network UPS Tools" app.
+1. Check the logs of the "Network UPS Tools" app to see if everything went well.
+1. Note the `Hostname` listed on the "Info" tab of the "Network UPS Tools" app.
+1. Configure the [NUT Integration][nut-ha-docs] using app Hostname (identified
+   above), Port `3493`, and the Username/Password configured in the app.
+1. For more information on configuring the NUT Integration in Home Assistant see
+   the [NUT integration documentation][nut-ha-docs].
 
 ## Configuration
 
-The add-on can be used with the basic configuration, with other options for more
+The app can be used with the basic configuration, with other options for more
 advanced users.
 
-**Note**: _Remember to restart the add-on when the configuration is changed._
+**Note**: _Remember to restart the app when the configuration is changed._
 
-Network UPS Tools add-on configuration:
+Network UPS Tools app configuration:
 
 ```yaml
 users:
@@ -63,7 +62,7 @@ shutdown_host: "false"
 
 ### Option: `log_level`
 
-The `log_level` option controls the level of log output by the add-on and can
+The `log_level` option controls the level of log output by the app and can
 be changed to be more or less verbose, which might be useful when you are
 dealing with an unknown issue. Possible values are:
 
@@ -72,7 +71,7 @@ dealing with an unknown issue. Possible values are:
 - `info`: Normal (usually) interesting events.
 - `warning`: Exceptional occurrences that are not errors.
 - `error`: Runtime errors that do not require immediate action.
-- `fatal`: Something went terribly wrong. Add-on becomes unusable.
+- `fatal`: Something went terribly wrong. App becomes unusable.
 
 Please note that each level automatically includes log messages from a
 more severe level, e.g., `debug` also shows `info` messages. By default,
@@ -113,8 +112,8 @@ The list of actions is expected to grow in the future.
 #### Sub-option: `upsmon`
 
 Add the necessary actions for a `upsmon` process to work. This is either set to
-`master` or `slave`. If creating an account for a `netclient` setup to connect
-this should be set to `slave`.
+`primary` or `secondary`. If creating an account for a `netclient` setup to connect
+this should be set to `secondary`.
 
 ### Option: `devices`
 
@@ -125,8 +124,7 @@ _Refer to the [`ups.conf(5)`][ups-conf] documentation for more information._
 
 #### Sub-option: `name`
 
-The name of the UPS. The name `default` is used internally, so you can’t use
-it in this file.
+The name of the UPS. You cannot use any space characters or the name `default`.
 
 #### Sub-option: `driver`
 
@@ -139,6 +137,16 @@ specific drivers.
 
 This is the serial port where the UPS is connected. The first serial port
 usually is `/dev/ttyS0`. Use `auto` to automatically detect the port.
+
+#### Sub-option: `powervalue`
+
+Optionally lets you set whether this particular UPS provides power to the
+device this app is running on. Useful if you have multiple UPS that you
+wish to monitor, but you don't want low battery on some of them to shut down
+this host. Acceptable values are `1` for "providing power to this host" or `0`
+for "monitor only". Defaults to `1`
+
+**Note**: _There must be a minimum of one attached device with powervalue `1`_
 
 #### Sub-option: `config`
 
@@ -171,60 +179,60 @@ devices:
       - product = ".*(Smart|Back)-?UPS.*"
 ```
 
-#### Option: `mode`
+### Option: `mode`
 
 Recognized values are `netserver` and `netclient`.
 
 - `netserver`: Runs the components needed to manage a locally connected UPS and
-  allow other clients to connect (either as slaves or for management).
+  allow other clients to connect (either as secondaries or for management).
 - `netclient`: Only runs `upsmon` to connect to a remote system running as
   `netserver`.
 
-#### Option: `shutdown_host`
+### Option: `shutdown_host`
 
 When this option is set to `true` on a UPS shutdown command, the host system
-will be shutdown. When set to `false` only the add-on will be stopped. This is to
+will be shutdown. When set to `false` only the app will be stopped. This is to
 allow testing without impact to the system.
 
-#### Option: `list_usb_devices`
+### Option: `list_usb_devices`
 
 When this option is set to `true`, a list of connected USB devices will be
-displayed in the add-on log when the add-on starts up. This option can be used
+displayed in the app log when the app starts up. This option can be used
 to help identify different UPS devices when multiple UPS devices are connected
 to the system.
 
-#### Option: `remote_ups_name`
+### Option: `remote_ups_name`
 
 When running in `netclient` mode, the name of the remote UPS.
 
-#### Option: `remote_ups_host`
+### Option: `remote_ups_host`
 
 When running in `netclient` mode, the host of the remote UPS.
 
-#### Option: `remote_ups_user`
+### Option: `remote_ups_user`
 
 When running in `netclient` mode, the user of the remote UPS.
 
-#### Option: `remote_ups_password`
+### Option: `remote_ups_password`
 
 When running in `netclient` mode, the password of the remote UPS.
 
 **Note**: _When using the remote option, the user and device options must still
 be present, however they will have no effect_
 
-#### Option: `upsd_maxage`
+### Option: `upsd_maxage`
 
 Allows setting the MAXAGE value in upsd.conf to increase the timeout for
 specific drivers, should not be changed for the majority of users.
 
-#### Option: `upsmon_deadtime`
+### Option: `upsmon_deadtime`
 
 Allows setting the DEADTIME value in upsmon.conf to adjust the stale time for
 the monitor process, should not be changed for the majority of users.
 
 ### Option: `i_like_to_be_pwned`
 
-Adding this option to the add-on configuration allows to you bypass the
+Adding this option to the app configuration allows to you bypass the
 HaveIBeenPwned password requirement by setting it to `true`.
 
 **Note**: _We STRONGLY suggest picking a stronger/safer password instead of
@@ -232,11 +240,11 @@ using this option! USE AT YOUR OWN RISK!_
 
 ### Option: `leave_front_door_open`
 
-Adding this option to the add-on configuration allows you to disable
+Adding this option to the app configuration allows you to disable
 authentication on the NUT server by setting it to `true` and leaving the
 username and password empty.
 
-**Note**: _We STRONGLY suggest, not to use this, even if this add-on is
+**Note**: _We STRONGLY suggest, not to use this, even if this app is
 only exposed to your internal network. USE AT YOUR OWN RISK!_
 
 ## Event Notifications
@@ -259,7 +267,7 @@ See the below table for more information as well as the message that will be in
 | `ONLINE`   | UPS is back online                                                    | "UPS %s on line power"                             |
 | `ONBATT`   | UPS is on battery                                                     | "UPS %s on battery"                                |
 | `LOWBATT`  | UPS has a low battery (if also on battery, it's "critical")           | "UPS %s battery is low"                            |
-| `FSD`      | UPS is being shutdown by the master (FSD = "Forced Shutdown")         | "UPS %s: forced shutdown in progress"              |
+| `FSD`      | UPS is being shutdown by the primary (FSD = "Forced Shutdown")        | "UPS %s: forced shutdown in progress"              |
 | `COMMOK`   | Communications established with the UPS                               | "Communications with UPS %s established"           |
 | `COMMBAD`  | Communications lost to the UPS                                        | "Communications with UPS %s lost"                  |
 | `SHUTDOWN` | The system is being shutdown                                          | "Auto logout and shutdown proceeding"              |
@@ -311,7 +319,7 @@ Got questions?
 
 You have several options to get them answered:
 
-- The [Home Assistant Community Add-ons Discord chat server][discord] for add-on
+- The [Home Assistant Community Apps Discord chat server][discord] for app
   support and feature requests.
 - The [Home Assistant Discord chat server][discord-ha] for general Home
   Assistant discussions and questions.
@@ -331,7 +339,7 @@ check [the contributor's page][contributors].
 
 MIT License
 
-Copyright (c) 2018-2021 Dale Higgs
+Copyright (c) 2018-2026 Dale Higgs
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -351,24 +359,26 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-[contributors]: https://github.com/hassio-addons/addon-nut/graphs/contributors
+[addon-badge]: https://my.home-assistant.io/badges/supervisor_addon.svg
+[addon]: https://my.home-assistant.io/redirect/supervisor_addon/?addon=a0d7b954_nut&repository_url=https%3A%2F%2Fgithub.com%2Fhassio-addons%2Frepository
+[contributors]: https://github.com/hassio-addons/app-nut/graphs/contributors
 [critical-notif]: https://companion.home-assistant.io/docs/notifications/critical-notifications
 [dale3h]: https://github.com/dale3h
 [discord-ha]: https://discord.gg/c5DvZ4e
 [discord]: https://discord.me/hassioaddons
-[fake-usb]: https://github.com/hassio-addons/addon-nut/issues/24
+[fake-usb]: https://github.com/hassio-addons/app-nut/issues/24
 [forum]: https://community.home-assistant.io/t/community-hass-io-add-on-network-ups-tools/68516
-[issue]: https://github.com/hassio-addons/addon-nut/issues
+[issue]: https://github.com/hassio-addons/app-nut/issues
 [nut-acknowledgements]: https://networkupstools.org/acknowledgements.html
 [nut-compatible]: https://networkupstools.org/stable-hcl.html
 [nut-conf]: https://networkupstools.org/docs/man/nut.conf.html
 [nut-features]: https://networkupstools.org/features.html
+[nut-ha-docs]: https://www.home-assistant.io/integrations/nut/
 [nut-notif-doc-1]: https://networkupstools.org/docs/user-manual.chunked/ar01s07.html
 [nut-notif-doc-2]: https://networkupstools.org/docs/man/upsmon.conf.html
-[nut-ha-docs]: https://www.home-assistant.io/integrations/nut/
 [nutupsdrv]: https://networkupstools.org/docs/man/nutupsdrv.html
 [reddit]: https://reddit.com/r/homeassistant
-[releases]: https://github.com/hassio-addons/addon-nut/releases
+[releases]: https://github.com/hassio-addons/app-nut/releases
 [semver]: https://semver.org/spec/v2.0.0
 [sleep]: https://linux.die.net/man/1/sleep
 [ups-conf]: https://networkupstools.org/docs/man/ups.conf.html

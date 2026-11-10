@@ -1,4 +1,4 @@
-# Home Assistant Community Add-on: Node-RED
+# Home Assistant Community App: Node-RED
 
 [![Release][release-shield]][release] ![Project Stage][project-stage-shield] ![Project Maintenance][maintenance-shield]
 
@@ -12,7 +12,7 @@ Flow-based programming for the Internet of Things.
 
 ## About
 
-Node-RED is a programming tool for wiring together hardware devices,
+[Node-RED][nodered] is a programming tool for wiring together hardware devices,
 APIs and online services in new and interesting ways.
 
 It provides a browser-based editor that makes it easy to wire together flows
@@ -27,10 +27,11 @@ runtime in a single click.
 [forum]: https://community.home-assistant.io/t/home-assistant-community-add-on-node-red/55023?u=frenck
 [github-sponsors-shield]: https://frenck.dev/wp-content/uploads/2019/12/github_sponsor.png
 [github-sponsors]: https://github.com/sponsors/frenck
-[maintenance-shield]: https://img.shields.io/maintenance/yes/2021.svg
+[maintenance-shield]: https://img.shields.io/maintenance/yes/2026.svg
+[nodered]: https://nodered.org
 [patreon-shield]: https://frenck.dev/wp-content/uploads/2019/12/patreon.png
 [patreon]: https://www.patreon.com/frenck
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-production%20ready-brightgreen.svg
-[release-shield]: https://img.shields.io/badge/version-v9.0.0-blue.svg
-[release]: https://github.com/hassio-addons/addon-node-red/tree/v9.0.0
-[screenshot]: https://github.com/hassio-addons/addon-node-red/raw/main/images/screenshot.png
+[release-shield]: https://img.shields.io/badge/version-v22.2.2-blue.svg
+[release]: https://github.com/hassio-addons/app-node-red/tree/v22.2.2
+[screenshot]: https://github.com/hassio-addons/app-node-red/raw/main/images/screenshot.png

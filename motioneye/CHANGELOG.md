@@ -1,31 +1,24 @@
 ## What’s changed
 
-## ✨ New features
-
-- Add add-on translation support @frenck (#212)
-
-## 🐛 Bug fixes
-
-- Improve translations source file @frenck (#213)
-- Revert "Make action_buttons configuration optional" @frenck (#214)
-
-## 🚀 Enhancements
-
-- Make action_buttons configuration optional @frenck (#211)
-
-## 🧰 Maintenance
-
-- Apply updated repository structure & CI workflow @frenck (#210)
-
 ## ⬆️ Dependency updates
 
-- ⬆️ Bump actions/stale from v3.0.17 to v3.0.18 @dependabot (#187)
-- ⬆️ Bump release-drafter/release-drafter from v5.14.0 to v5.15.0 @dependabot (#193)
-- ⬆️ Upgrades git to 2.30.2-r0 @frenck (#195)
-- ⬆️ Upgrades add-on base image to v9.1.6 @frenck (#199)
-- ⬆️ Bump ludeeus/action-shellcheck from 1.0.0 to 1.1.0 @dependabot (#197)
-- ⬆️ Bump docker/build-push-action from v2.3.0 to v2.4.0 @dependabot (#200)
-- ⬆️ Bump docker/setup-buildx-action from v1.1.1 to v1.1.2 @dependabot (#202)
-- ⬆️ Bump docker/setup-qemu-action from v1.0.1 to v1.0.2 @dependabot (#201)
-- ⬆️ Bump actions/cache from v2.1.4 to v2.1.5 @dependabot (#205)
-- Upgrades add-on base image to v9.2.0 @frenck (#209)
+- ⬆️ Update alpine_3_24/rsync to v3.5.0-r0 @[renovate[bot]](https://github.com/apps/renovate) ([#618](https://github.com/hassio-addons/app-motioneye/pull/618))
+- ⬆️ Update alpine_3_24/curl-dev to v8.22.0-r0 @[renovate[bot]](https://github.com/apps/renovate) ([#622](https://github.com/hassio-addons/app-motioneye/pull/622))
+- ⬆️ Update ghcr.io/hassio-addons/base Docker tag to v21.0.5 @[renovate[bot]](https://github.com/apps/renovate) ([#623](https://github.com/hassio-addons/app-motioneye/pull/623))
+- ⬆️ Update ghcr.io/hassio-addons/base Docker tag to v21.0.6 @[renovate[bot]](https://github.com/apps/renovate) ([#630](https://github.com/hassio-addons/app-motioneye/pull/630))
+- ⬆️ Update ghcr.io/hassio-addons/base Docker tag to v21.0.7 @[renovate[bot]](https://github.com/apps/renovate) ([#631](https://github.com/hassio-addons/app-motioneye/pull/631))
+- ⬆️ Update alpine_3_24/python3-dev to v3.14.8-r0 @[renovate[bot]](https://github.com/apps/renovate) ([#633](https://github.com/hassio-addons/app-motioneye/pull/633))
+- ⬆️ Update alpine_3_24/python3 to v3.14.8-r0 @[renovate[bot]](https://github.com/apps/renovate) ([#632](https://github.com/hassio-addons/app-motioneye/pull/632))
+- ⬆️ Update ghcr.io/hassio-addons/base Docker tag to v21.0.8 @[renovate[bot]](https://github.com/apps/renovate) ([#634](https://github.com/hassio-addons/app-motioneye/pull/634))
+- ⬆️ Update alpine_3_24/cifs-utils to v7.5-r1 @[renovate[bot]](https://github.com/apps/renovate) ([#635](https://github.com/hassio-addons/app-motioneye/pull/635))
+- ⬆️ Update alpine_3_24/nginx to v1.30.6-r0 @[renovate[bot]](https://github.com/apps/renovate) ([#637](https://github.com/hassio-addons/app-motioneye/pull/637))
+- ⬆️ Update alpine_3_24/musl-dev to v1.2.6-r3 @[renovate[bot]](https://github.com/apps/renovate) ([#636](https://github.com/hassio-addons/app-motioneye/pull/636))
+- ⬆️ Update ghcr.io/hassio-addons/base Docker tag to v21.0.9 @[renovate[bot]](https://github.com/apps/renovate) ([#638](https://github.com/hassio-addons/app-motioneye/pull/638))
+- ⬆️ Update hassio-addons/workflows action to v5 @[renovate[bot]](https://github.com/apps/renovate) ([#639](https://github.com/hassio-addons/app-motioneye/pull/639))
+- ⬆️ Update alpine_3_24/ffmpeg-dev to v8.1.3-r0 @[renovate[bot]](https://github.com/apps/renovate) ([#641](https://github.com/hassio-addons/app-motioneye/pull/641))
+- ⬆️ Update alpine_3_24/ffmpeg-libs to v8.1.3-r0 @[renovate[bot]](https://github.com/apps/renovate) ([#642](https://github.com/hassio-addons/app-motioneye/pull/642))
+- ⬆️ Update alpine_3_24/ffmpeg to v8.1.3-r0 @[renovate[bot]](https://github.com/apps/renovate) ([#640](https://github.com/hassio-addons/app-motioneye/pull/640))
+- ⬆️ Update alpine_3_24/curl-dev to v8.23.0-r0 @[renovate[bot]](https://github.com/apps/renovate) ([#643](https://github.com/hassio-addons/app-motioneye/pull/643))
+- ⬆️ Update ghcr.io/hassio-addons/base Docker tag to v21.0.10 @[renovate[bot]](https://github.com/apps/renovate) ([#644](https://github.com/hassio-addons/app-motioneye/pull/644))
+- ⬆️ Update alpine_3_24/python3-dev to v3.14.10-r1 @[renovate[bot]](https://github.com/apps/renovate) ([#646](https://github.com/hassio-addons/app-motioneye/pull/646))
+- ⬆️ Update alpine_3_24/python3 to v3.14.10-r1 @[renovate[bot]](https://github.com/apps/renovate) ([#645](https://github.com/hassio-addons/app-motioneye/pull/645))

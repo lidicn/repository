@@ -1,14 +1,15 @@
-[Full Changelog][changelog]
+## What’s changed
 
-### 🔨 Changes
+## ✨ New features
 
-- ✏️ Fix docs link in README (#53)
-- ⬆ Upgrades cargo to 0.44.1-0ubuntu1~18.04.1
-- ⬆ Upgrades rustc to 1.43.0+dfsg1+llvm-1~exp1ubuntu2~18.04.1
-- ⬆ Upgrades add-on base image to v5.2.2
+- Add access_token option @marmarek ([#370](https://github.com/hassio-addons/app-spotify-connect/pull/370))
 
-[changelog]: https://github.com/hassio-addons/addon-spotify-connect/compare/v0.8.1...v0.8.2
+## 🧰 Maintenance
 
-Questions? Join our Discord server! https://discord.me/hassioaddons
-Enjoying my add-ons? Consider supporting my work:
-https://github.com/sponsors/frenck or https://patreon.com/frenck
+- 👷 Replace Repology with Alpine CDN datasource for package pins @frenck ([#382](https://github.com/hassio-addons/app-spotify-connect/pull/382))
+
+## ⬆️ Dependency updates
+
+- ⬆️ Update alpine_3_24/cargo to v1.96.1-r0 @[renovate[bot]](https://github.com/apps/renovate) ([#380](https://github.com/hassio-addons/app-spotify-connect/pull/380))
+- ⬆️ Update ghcr.io/hassio-addons/base Docker tag to v21.0.2 @[renovate[bot]](https://github.com/apps/renovate) ([#377](https://github.com/hassio-addons/app-spotify-connect/pull/377))
+- ⬆️ Update hassio-addons/workflows action to v3.0.1 @[renovate[bot]](https://github.com/apps/renovate) ([#381](https://github.com/hassio-addons/app-spotify-connect/pull/381))

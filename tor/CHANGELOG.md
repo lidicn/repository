@@ -1,13 +1,18 @@
 ## What’s changed
 
+## 🧰 Maintenance
+
+- Migrate the user bundle to /etc/s6-overlay/user-bundles.d @frenck ([#341](https://github.com/hassio-addons/app-tor/pull/341))
+
 ## ⬆️ Dependency updates
 
-- ⬆️ Bump actions/stale from v3.0.15 to v3.0.16 @dependabot (#45)
-- ⬆️ Bump frenck/action-addon-linter from v1.4 to v2 @dependabot (#46)
-- ⬆️ Bump release-drafter/release-drafter from v5.13.0 to v5.14.0 @dependabot (#47)
-- ⬆️ Bump docker/build-push-action from v2.2.2 to v2.3.0 @dependabot (#48)
-- ⬆️ Bump actions/stale from v3.0.16 to v3.0.17 @dependabot (#49)
-- ⬆️ Bump actions/stale from v3.0.17 to v3.0.18 @dependabot (#50)
-- ⬆️ Upgrades tor to 0.4.4.8-r0 @frenck (#52)
-- ⬆️ Bump release-drafter/release-drafter from v5.14.0 to v5.15.0 @dependabot (#51)
-- ⬆️ Upgrades add-on base image to v9.1.5 @frenck (#53)
+- ⬆️ Update ghcr.io/hassio-addons/base Docker tag to v21.0.5 @[renovate[bot]](https://github.com/apps/renovate) ([#340](https://github.com/hassio-addons/app-tor/pull/340))
+- ⬆️ Update alpine_3_24/tor to v0.4.9.13-r0 @[renovate[bot]](https://github.com/apps/renovate) ([#342](https://github.com/hassio-addons/app-tor/pull/342))
+- ⬆️ Update ghcr.io/hassio-addons/base Docker tag to v21.0.6 @[renovate[bot]](https://github.com/apps/renovate) ([#343](https://github.com/hassio-addons/app-tor/pull/343))
+- ⬆️ Update alpine_3_24/openssl to v3.5.9-r0 @[renovate[bot]](https://github.com/apps/renovate) ([#344](https://github.com/hassio-addons/app-tor/pull/344))
+- ⬆️ Update ghcr.io/hassio-addons/base Docker tag to v21.0.7 @[renovate[bot]](https://github.com/apps/renovate) ([#345](https://github.com/hassio-addons/app-tor/pull/345))
+- ⬆️ Update ghcr.io/hassio-addons/base Docker tag to v21.0.8 @[renovate[bot]](https://github.com/apps/renovate) ([#346](https://github.com/hassio-addons/app-tor/pull/346))
+- ⬆️ Update alpine_3_24/tor to v0.4.9.14-r0 @[renovate[bot]](https://github.com/apps/renovate) ([#347](https://github.com/hassio-addons/app-tor/pull/347))
+- ⬆️ Update alpine_3_24/go to v1.26.9-r0 @[renovate[bot]](https://github.com/apps/renovate) ([#348](https://github.com/hassio-addons/app-tor/pull/348))
+- ⬆️ Update hassio-addons/workflows action to v5 @[renovate[bot]](https://github.com/apps/renovate) ([#351](https://github.com/hassio-addons/app-tor/pull/351))
+- ⬆️ Update ghcr.io/hassio-addons/base Docker tag to v21.0.9 @[renovate[bot]](https://github.com/apps/renovate) ([#350](https://github.com/hassio-addons/app-tor/pull/350))

@@ -1,25 +1,32 @@
-# Home Assistant Community Add-on: SQLite Web
+# Home Assistant Community App: SQLite Web
 
 This enables you to easily explore all tables and content that is saved in your database.
 
 ## Installation
 
-The installation of this add-on is pretty straightforward and not different in
-comparison to installing any other Home Assistant add-on.
+The installation of this app is pretty straightforward and not different in
+comparison to installing any other Home Assistant app.
 
-1. Search for the “SQLite Web” add-on in the Hass.io 166 add-on store
-   and install it.
-1. Start the "SQLite Web" add-on
-1. Check the logs of the "SQLite Web" add-on to see if everything went well.
+1. Click the Home Assistant My button below to open the app on your Home
+   Assistant instance.
+
+   [![Open this app in your Home Assistant instance.][app-badge]][app]
+
+1. Click the "Install" button to install the app.
+1. Start the "SQLite Web" app
+1. Check the logs of the "SQLite Web" app to see if everything went well.
 1. Click "OPEN WEB UI" to open the SQLite Web interface.
 1. Log in with your Home Assistant user.
 
-**NOTE**: Starting the add-on might take a couple of minutes (especially the
-first time starting the add-on).
-
 ## Configuration
 
-This add-on has no configuration options.
+**Note**: _Remember to restart the app when the configuration is changed._
+
+### Option: Database
+
+An optional database path that can set to instruct SQLite web to use a specific
+database file. When not set, the default Home Assistant database file location
+is used.
 
 ## Changelog & Releases
 
@@ -40,7 +47,7 @@ Got questions?
 
 You have several options to get them answered:
 
-- The [Home Assistant Community Add-ons Discord chat server][discord] for add-on
+- The [Home Assistant Community Apps Discord chat server][discord] for app
   support and feature requests.
 - The [Home Assistant Discord chat server][discord-ha] for general Home
   Assistant discussions and questions.
@@ -60,7 +67,8 @@ check [the contributor's page][contributors].
 
 MIT License
 
-Copyright (c) 2018-2021 Joakim Sørensen
+Copyright (c) 2018-2019 Joakim Sørensen
+Copyright (c) 2019-2026 Franck Nijhof
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -80,12 +88,14 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-[contributors]: https://github.com/hassio-addons/addon-sqlite-web/graphs/contributors
+[app-badge]: https://my.home-assistant.io/badges/supervisor_addon.svg
+[app]: https://my.home-assistant.io/redirect/supervisor_addon/?addon=a0d7b954_sqlite-web&repository_url=https%3A%2F%2Fgithub.com%2Fhassio-addons%2Frepository
+[contributors]: https://github.com/hassio-addons/app-sqlite-web/graphs/contributors
 [discord-ha]: https://discord.gg/c5DvZ4e
 [discord]: https://discord.me/hassioaddons
-[forum]: https://community.home-assistant.io/t/home-assistant-community-add-on-sqlite-web/68912?u=frenck
-[issue]: https://github.com/hassio-addons/addon-sqlite-web/issues
+[forum]: https://community.home-assistant.io/t/home-assistant-community-app-sqlite-web/68912?u=frenck
+[issue]: https://github.com/hassio-addons/app-sqlite-web/issues
 [ludeeus]: https://github.com/ludeeus
 [reddit]: https://reddit.com/r/homeassistant
-[releases]: https://github.com/hassio-addons/addon-sqlite-web/releases
-[semver]: http://semver.org/spec/v2.0.0.htm
+[releases]: https://github.com/hassio-addons/app-sqlite-web/releases
+[semver]: http://semver.org/spec/v2.0.0.html

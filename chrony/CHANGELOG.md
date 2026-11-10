@@ -1,10 +1,15 @@
 ## What’s changed
 
+## 🧰 Maintenance
+
+- 👷 Prepare for the apps rename and modernize the repository @frenck ([#221](https://github.com/hassio-addons/app-chrony/pull/221))
+
+## 📚 Documentation
+
+- 👷 Prepare for the apps rename and modernize the repository @frenck ([#221](https://github.com/hassio-addons/app-chrony/pull/221))
+
 ## ⬆️ Dependency updates
 
-- Bump release-drafter/release-drafter from v5.14.0 to v5.15.0 @dependabot (#46)
-- Bump ludeeus/action-shellcheck from 1.0.0 to 1.1.0 @dependabot (#48)
-- Bump docker/build-push-action from v2.3.0 to v2.4.0 @dependabot (#49)
-- Bump docker/setup-buildx-action from v1.1.1 to v1.1.2 @dependabot (#50)
-- Bump docker/setup-qemu-action from v1.0.1 to v1.0.2 @dependabot (#51)
-- ⬆️ Upgrades add-on base image to v9.1.7 @sinclairpaul (#52)
+- ⬆️ Update ghcr.io/hassio-addons/base Docker tag to v19 @[renovate[bot]](https://github.com/apps/renovate) ([#216](https://github.com/hassio-addons/app-chrony/pull/216))
+- ⬆️ Update ghcr.io/hassio-addons/base Docker tag to v21 @[renovate[bot]](https://github.com/apps/renovate) ([#218](https://github.com/hassio-addons/app-chrony/pull/218))
+- ⬆️ Update hassio-addons/workflows action to v4 @[renovate[bot]](https://github.com/apps/renovate) ([#222](https://github.com/hassio-addons/app-chrony/pull/222))

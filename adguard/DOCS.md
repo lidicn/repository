@@ -1,34 +1,42 @@
-# Home Assistant Community Add-on: AdGuard Home
+# Home Assistant Community App: AdGuard Home
 
-AdGuard Home is a network-wide ad-and-tracker blocking DNS server with
-parental control (adult content blocking) capabilities. Its purpose is to let
-you control your entire network and all your devices, and it does not require
-using a client-side program.
+[AdGuard Home][adguard] is a network-wide ad-and-tracker blocking DNS server
+with parental control (adult content blocking) capabilities. Its purpose is to
+let you control your entire network and all your devices, and it does not
+require using a client-side program.
 
 AdGuard Home provides a beautiful, easy and feature-rich web interface to
 easily manage the filtering process and its settings.
 
 ## Installation
 
-The installation of this add-on is pretty straightforward and not different in
-comparison to installing any other Home Assistant add-on.
+The installation of this app is pretty straightforward and not different in
+comparison to installing any other Home Assistant app.
 
 1. **Ensure your Home Assistant device has a
-   [static IP and static external DNS servers!](https://github.com/home-assistant/hassos/blob/dev/Documentation/network.md#static-ip)**
+   [static IP and static external DNS servers!](https://developers.home-assistant.io/docs/operating-system/network)**
    This is important! You **WILL** end up having issues if you skip this step.
-   Also, please note, setting a fixed IP in your router is **NOT** static.
-1. Search for the "AdGuard Home" add-on in the Supervisor add-on store and
-   install it.
-1. Start the "AdGuard Home" add-on.
+   - Change this setting in Network:
+     [![Open your Home Assistant instance and manage your systems network configuration.](https://my.home-assistant.io/badges/network.svg)](https://my.home-assistant.io/redirect/network/)
+     (_Settings → System → Network
+     → Configure network interfaces → Your Interface → IPv4 → Static_)
+   - Please note, setting a fixed IP in your router is **NOT** static.
+1. Click the Home Assistant My button below to open the app on your Home
+   Assistant instance.
+
+   [![Open this app in your Home Assistant instance.][addon-badge]][addon]
+
+1. Click the "Install" button to install the app.
+1. Start the "AdGuard Home" app.
 1. Check the logs of the "AdGuard Home" to see if everything went well.
 1. Click the "OPEN WEB UI" button and log in with your Home Assistant account.
 1. Ready to go!
 
 ## Configuration
 
-**Note**: _Remember to restart the add-on when the configuration is changed._
+**Note**: _Remember to restart the app when the configuration is changed._
 
-Example add-on configuration:
+Example app configuration:
 
 ```yaml
 log_level: info
@@ -41,16 +49,17 @@ keyfile: privkey.pem
 
 ### Option: `log_level`
 
-The `log_level` option controls the level of log output by the addon and can
+The `log_level` option controls the level of log output by the app and can
 be changed to be more or less verbose, which might be useful when you are
 dealing with an unknown issue. Possible values are:
 
 - `trace`: Show every detail, like all called internal functions.
 - `debug`: Shows detailed debug information.
 - `info`: Normal (usually) interesting events.
+- `notice`: Normal but significant events.
 - `warning`: Exceptional occurrences that are not errors.
 - `error`: Runtime errors that do not require immediate action.
-- `fatal`: Something went terribly wrong. Add-on becomes unusable.
+- `fatal`: Something went terribly wrong. App becomes unusable.
 
 Please note that each level automatically includes log messages from a
 more severe level, e.g., `debug` also shows `info` messages. By default,
@@ -59,7 +68,7 @@ you are troubleshooting.
 
 ### Option: `ssl`
 
-Enables/Disables SSL (HTTPS) on the add-on. Set it `true` to enable it,
+Enables/Disables SSL (HTTPS) on the app. Set it `true` to enable it,
 `false` otherwise.
 
 **Note**: _The SSL settings only apply to direct access and has no effect
@@ -79,19 +88,79 @@ The private key file to use for SSL.
 
 ### Option: `leave_front_door_open`
 
-Adding this option to the add-on configuration allows you to disable
+Adding this option to the app configuration allows you to disable
 authentication on the AdGuard Home by setting it to `true`.
 
-**Note**: _We STRONGLY suggest, not to use this, even if this add-on is
+**Note**: _We STRONGLY suggest, not to use this, even if this app is
 only exposed to your internal network. USE AT YOUR OWN RISK!_
+
+### Option: `safebrowsing_block_host`
+
+The host name AdGuard Home answers with for requests blocked by its safe
+browsing filter. By default, this is `standard-block.dns.adguard.com`, which
+resolves to an external block page hosted by AdGuard, and therefore leaks the
+blocked host name to that external service.
+
+Set this to a host name of your own to keep those requests local, for
+example when using a custom block page.
+
+**Note**: _This setting is only applied when the option is set. Removing the
+option again keeps the last configured value._
+
+### Option: `parental_block_host`
+
+The host name AdGuard Home answers with for requests blocked by its parental
+control filter. By default, this is `family-block.dns.adguard.com`, which
+resolves to an external block page hosted by AdGuard, and therefore leaks the
+blocked host name to that external service.
+
+Set this to a host name of your own to keep those requests local, for
+example when using a custom block page.
+
+**Note**: _This setting is only applied when the option is set. Removing the
+option again keeps the last configured value._
 
 ## Encryption Settings (Advanced Usage)
 
-Adguard allows the configuration of running DNS-over-HTTPS and DNS-over-
-TLS locally. If you configure these options please ensure to restart the
-addon afterwards. Also to use DNS-over-HTTPS correctly please ensure to
-configure SSL on the addon as well as in Adguard itself. Also consider
-that the addon and Adguard cannot use the same port for SSL.
+AdGuard Home allows the configuration of running DNS-over-HTTPS and
+DNS-over-TLS locally. If you configure these options please ensure to restart
+the app afterwards. Also to use DNS-over-HTTPS correctly please ensure to
+configure SSL on the app as well as in AdGuard Home itself. Also consider
+that the app and AdGuard Home cannot use the same port for SSL.
+
+## Accessing the AdGuard Home API (Advanced Usage)
+
+AdGuard Home ships an HTTP API, served under `/control`, which you can use to
+query the app remotely, for example to analyze the query log from somewhere
+else.
+
+Ingress is not usable for this. It is built around a Home Assistant session
+and rewrites the paths it proxies, so it is not something an external API
+client can talk to. Use the direct web interface port instead, which is
+disabled by default: set a port for `80/tcp` in the Network section of the app
+configuration and restart the app. The API is then available on that port,
+for example `http://<your-instance>:<port>/control/status`.
+
+Take note of the authentication, because two layers are involved and they can
+collide. NGINX sits in front of AdGuard Home and, by default, checks every
+request to the direct port against Home Assistant using HTTP basic auth. That
+same `Authorization` header is passed on to AdGuard Home, whose API also uses
+basic auth. If you have users configured inside AdGuard Home, it does not
+recognize your Home Assistant credentials and answers `401`, even though the
+request made it past NGINX.
+
+Two combinations work:
+
+- Keep the Home Assistant check enabled and configure no users inside AdGuard
+  Home. Your Home Assistant credentials get you through NGINX, and AdGuard
+  Home does not ask for anything.
+- Set `leave_front_door_open` to `true` and configure users inside AdGuard
+  Home. NGINX stops checking, AdGuard Home's own basic auth applies, and your
+  API client authenticates against AdGuard Home directly.
+
+**Note**: _The warning on `leave_front_door_open` above is aimed at enabling
+it while AdGuard Home itself has no users configured, which leaves the app
+completely unauthenticated. Only expose this port on your local network._
 
 ## Changelog & Releases
 
@@ -112,7 +181,7 @@ Got questions?
 
 You have several options to get them answered:
 
-- The [Home Assistant Community Add-ons Discord chat server][discord] for add-on
+- The [Home Assistant Community Apps Discord chat server][discord] for app
   support and feature requests.
 - The [Home Assistant Discord chat server][discord-ha] for general Home
   Assistant discussions and questions.
@@ -132,7 +201,7 @@ check [the contributor's page][contributors].
 
 MIT License
 
-Copyright (c) 2019-2021 Franck Nijhof
+Copyright (c) 2019-2026 Franck Nijhof
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -152,12 +221,15 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-[contributors]: https://github.com/hassio-addons/addon-adguard-home/graphs/contributors
+[addon-badge]: https://my.home-assistant.io/badges/supervisor_addon.svg
+[addon]: https://my.home-assistant.io/redirect/supervisor_addon/?addon=a0d7b954_adguard&repository_url=https%3A%2F%2Fgithub.com%2Fhassio-addons%2Frepository
+[adguard]: https://adguard.com/adguard-home/overview.html
+[contributors]: https://github.com/hassio-addons/app-adguard-home/graphs/contributors
 [discord-ha]: https://discord.gg/c5DvZ4e
 [discord]: https://discord.me/hassioaddons
 [forum]: https://community.home-assistant.io/t/home-assistant-community-add-on-adguard-home/90684?u=frenck
 [frenck]: https://github.com/frenck
-[issue]: https://github.com/hassio-addons/addon-adguard-home/issues
+[issue]: https://github.com/hassio-addons/app-adguard-home/issues
 [reddit]: https://reddit.com/r/homeassistant
-[releases]: https://github.com/hassio-addons/addon-adguard-home/releases
-[semver]: http://semver.org/spec/v2.0.0.htm
+[releases]: https://github.com/hassio-addons/app-adguard-home/releases
+[semver]: https://semver.org/spec/v2.0.0.html

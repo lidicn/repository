@@ -1,10 +1,6 @@
 ## What’s changed
 
-## 🧰 Maintenance
-
-- Apply updated repository structure & CI workflow @frenck (#143)
-
 ## ⬆️ Dependency updates
 
-- ⬆️ Bump brpaz/hadolint-action from v1.3.1 to v1.4.0 @dependabot (#140)
-- Upgrades add-on base image to v4.2.0 @frenck (#142)
+- ⬆️ Update grafana/grafana to v13.3.0 @[renovate[bot]](https://github.com/apps/renovate) ([#540](https://github.com/hassio-addons/app-grafana/pull/540))
+- ⬆️ Update App base image to v9.5.2 @[renovate[bot]](https://github.com/apps/renovate) ([#541](https://github.com/hassio-addons/app-grafana/pull/541))
